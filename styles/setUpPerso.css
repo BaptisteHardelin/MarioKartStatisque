@@ -1,0 +1,23 @@
+.selectPersonnage {
+    display: inline-block;
+    margin-right: 5%;
+    margin-bottom: 2%;
+}
+
+.selectKarts {
+    display: inline-block;
+    margin-right: 5%;
+    margin-bottom: 2%;
+}
+
+.selectRoues {
+    display: inline-block;
+    margin-right: 5%;
+    margin-bottom: 2%;
+}
+
+.selectAiles {
+    display: inline-block;
+    margin-right: 5%;
+    margin-bottom: 2%;
+}
