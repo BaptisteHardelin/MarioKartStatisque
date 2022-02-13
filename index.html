@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,80 @@
     <link rel="icon" href="./img/iconMarioKart.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/drakTheme.css">
     <link rel="stylesheet" href="./styles/responsiveCss.css">
+    <script src="./scripts/afficherPerso.js" defer></script>
+    <script src="./scripts/afficherKarts.js" defer></script>
+    <script src="./scripts/afficherRoues.js" defer></script>
+    <script src="./scripts/afficherAiles.js" defer></script>
 </head>
+
 <body>
-    
+
     <h1 class="centerElement">SpeedRun training</h1>
+
+    <div class="setUp">
+        <div class="selectPersonnage">
+            <form>
+                <label>Choisissez un personnage</label>
+                <br />
+                <select id="personnage">
+                    <option value="" selected></option>
+                    <option value="mario">Mario</option>
+                    <option value="luigi">Luigi</option>
+                    <option value="peach">Peach</option>
+                </select>
+            </form>
+
+            <img id="persoSelected" src="">
+        </div>
+
+        <div class="selectKarts">
+            <form>
+                <label>Choisissez un karts / Moto / Quad</label>
+                <br />
+                <select id="karts">
+                    <option value="" selected></option>
+                    <option value="kartStandard">Kart Standard</option>
+                    <option value="kartRetro">Kart Rétro</option>
+                    <option value="proto8">Proto 8</option>
+                </select>
+            </form>
+
+            <img id="kartsSelected" src="">
+        </div>
+
+        <div class="selectRoues">
+            <form>
+                <label>Choisissez une paire de roues</label>
+                <br />
+                <select id="roues">
+                    <option value="" selected></option>
+                    <option value="roueStandard">Roue Standard</option>
+                    <option value="mastodonte">Mastodonte</option>
+                    <option value="roller">Roller</option>
+                </select>
+            </form>
+
+            <img id="rouesSelected" src="">
+        </div>
+
+        <div class="selectAiles">
+            <form>
+                <label>Choisissez une paire d'Ailes</label>
+                <br />
+                <select id="ailes">
+                    <option value="" selected></option>
+                    <option value="aileStandard">Ailes Standard</option>
+                    <option value="aileNuage">Aile Nuages</option>
+                    <option value="aileWarrio">Aile Warrio</option>
+                </select>
+            </form>
+
+            <img id="ailesSelected" src="">
+        </div>
+    </div>
+
+
+    <!-- https://mario.fandom.com/fr/wiki/Mario_Kart_8_Deluxe#Karts -->
 </body>
+
 </html>
