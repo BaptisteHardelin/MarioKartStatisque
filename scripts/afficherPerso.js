@@ -5,5 +5,6 @@ let persoSelected = document.getElementById('persoSelected');
 personnage.addEventListener('change', function () {
     let textPersonnageName = personnage.value;
     // On affiche l'image du personnage en question
-    persoSelected.src = '../img/personnages/' + textPersonnageName + '.png';
+    persoSelected.src =
+        'https://github.com/BaptisteHardelin/MarioKartStatisque/blob/main/img/personnages/' + textPersonnageName + '.png';
 });
