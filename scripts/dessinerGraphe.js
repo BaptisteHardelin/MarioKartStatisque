@@ -1,28 +1,24 @@
-// Get the HTML canvas by its id 
-let canvas = document.getElementById("canvas");
-// Example datasets for X and Y-axes
-let course = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24']; //Stays on the X-axis 
-let points = [] //Stays on the Y-axis
+var dps = [];   //dataPoints. 
 
-let input1 = document.getElementById('inputCourse1');
+var chart = new CanvasJS.Chart("chartContainer", {
+    title: {
+        text: "Point Mario Kart"
+    },
+    data: [{
+        type: "line",
+        dataPoints: dps
+    }]
+});
 
-function addData(chart, data) {
-    chart.data.datasets.forEach((dataset) => {
-        dataset.data.push(data);
+function addDataPointsAndRender() {
+    xValue = Number(document.getElementById('xValue').value);
+    yValue = Number(document.getElementById('yValue').value);
+    dps.push({
+        x: xValue,
+        y: yValue
     });
-    chart.update();
+    chart.render();
 }
 
-// Create an instance of Chart object:
-new Chart(canvas, {
-    type: 'line', //Declare the chart type 
-    data: {
-        labels: course, //X-axis data 
-        datasets: [{
-            data: points, //Y-axis data 
-            backgroundColor: '#5e440f',
-            borderColor: 'white',
-            fill: false, //Fills the curve under the line with the babckground color. It's true by default 
-        }]
-    },
-});
+var renderButton = document.getElementById('renderButton');
+renderButton.addEventListener('click', addDataPointsAndRender);
